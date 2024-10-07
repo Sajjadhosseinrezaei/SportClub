@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="{% static 'accounts/login.css' %}">
+{% endblock %}
+{% block content %}
+ <div class="container login-container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Login</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="email">{{ form.email.label }}:</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="password">{{ form.password.label }}:</label>
+                            {{ form.password }}
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

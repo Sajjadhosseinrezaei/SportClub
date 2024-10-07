@@ -1,0 +1,48 @@
+body {
+    background-color: #343a40;
+    color: white;
+}
+
+.login-container {
+    margin-top: 100px;
+}
+
+.card {
+    background-color: #2e3237;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+h3.card-title {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.form-control {
+    background-color: #4a4f55;
+    border: 2px solid #6c757d;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-control::placeholder {
+    color: #cfd4d9;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    color: #cfd4d9;
+}
