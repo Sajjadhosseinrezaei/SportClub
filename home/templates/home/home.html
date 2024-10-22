@@ -65,7 +65,7 @@ Home - Futsal Team
             </div>
             {% if players|length > 3 %}
             <div class="text-center mt-4">
-                <a href="" class="btn btn-primary">View All Players</a>
+                <a href="{% url 'players:players_list' %}" class="btn btn-primary">View All Players</a>
             </div>
             {% endif %}
         </div>
