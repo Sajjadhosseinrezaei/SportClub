@@ -49,32 +49,29 @@ Home - Futsal Team
 
     <!-- معرفی بازیکنان -->
     <section class="my-5">
-        <h2 class="text-center mb-4">Our Players</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="row">
-                    <!-- بازیکن 1 -->
-                    <div class="col-md-4 text-center">
-                        <img src="{% static 'home/images/player1.webp' %}" class="img-fluid rounded-circle mb-2" alt="Player 1">
-                        <h5>Player 1</h5>
-                        <p>Forward</p>
-                    </div>
-                    <!-- بازیکن 2 -->
-                    <div class="col-md-4 text-center">
-                        <img src="{% static 'home/images/player2.webp' %}" class="img-fluid rounded-circle mb-2" alt="Player 2">
-                        <h5>Player 2</h5>
-                        <p>Goalkeeper</p>
-                    </div>
-                    <!-- بازیکن 3 -->
-                    <div class="col-md-4 text-center">
-                        <img src="{% static 'home/images/player1.webp' %}" class="img-fluid rounded-circle mb-2" alt="Player 3">
-                        <h5>Player 3</h5>
-                        <p>Defender</p>
-                    </div>
+    <h2 class="text-center mb-4">Our Players</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="row">
+                {% for player in players %}
+                {% if forloop.counter <= 3 %}
+                <div class="col-md-4 text-center">
+                    <img src="{{ player.img.url }}" class="img-fluid rounded-circle player-image mb-2" alt="{{ player.family }}">
+                    <h5>{{ player.family }}</h5>
+                    <p>{{ player.position }}</p>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
+            {% if players|length > 3 %}
+            <div class="text-center mt-4">
+                <a href="" class="btn btn-primary">View All Players</a>
+            </div>
+            {% endif %}
         </div>
-    </section>
+    </div>
+</section>
+
 
 </div>
 {% endblock %}
