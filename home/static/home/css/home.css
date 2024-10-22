@@ -29,3 +29,8 @@ p {
 .img-fluid {
     border: 3px solid #007bff; /* کادر دور عکس بازیکنان */
 }
+.player-image {
+    width: 150px;  /* عرض ثابت */
+    height: 150px; /* ارتفاع ثابت */
+    object-fit: cover; /* نسبت ابعاد را حفظ می‌کند و اضافی را برش می‌دهد */
+}
