@@ -4,7 +4,7 @@ from . import views
 app_name = 'players'
 
 
-url_patterns = [
-
+urlpatterns = [
+    path('players_list', views.PlayersListView.as_view(), name='players_list'),
 
 ]
