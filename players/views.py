@@ -8,4 +8,5 @@ class PlayersListView(ListView):
     model = Players
     template_name = 'players/players_list.html'
     context_object_name = 'players'
+    paginate_by = 10
 
